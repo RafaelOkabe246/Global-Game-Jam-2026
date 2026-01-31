@@ -6,15 +6,33 @@ public class DialogueManager : MonoBehaviour
 {
     public Character character1;
 
-    public Tip[] inventoryTips;
+    public static DialogueManager instance;
+
+    private DialogueInventory dialogueInventory;
+
+    private UiManager uiManager;
+    private Ui_Dialogue ui_Dialogue;
 
     private Dialogue currentDialogue;
     private DialogueLine currentDialogueLine;
     private int currentDialogueLineIndex;
     private int charIndex;
 
+    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
+
+        uiManager = UiManager.instance;
+        dialogueInventory = DialogueInventory.instance;
+
+        ui_Dialogue = uiManager.ui_Dialogue;
+
         SelectDialogue(character1);
     }
 
@@ -27,7 +45,7 @@ public class DialogueManager : MonoBehaviour
         //Check conditions
         for (int i = 0; i < characterDialogues.Length; i++)
         {
-            if (characterDialogues[i].dialogue.CheckIfConditionsTrue(inventoryTips.ToList()))
+            if (characterDialogues[i].dialogue.CheckIfConditionsTrue(dialogueInventory.inventoryTips))
             {
                 //Conditions of the dialogue are true
                 dialoguesConditionTrue.Add(characterDialogues[i]);
@@ -62,7 +80,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (dialogue.CheckIfConditionsTrue(inventoryTips.ToList()))
+        if (dialogue.CheckIfConditionsTrue(dialogueInventory.inventoryTips))
         {
             characterDialogue.hasPlayed = true;
             OnStartDialogue(dialogue);
@@ -76,8 +94,10 @@ public class DialogueManager : MonoBehaviour
         currentDialogueLine = dialogue.dialogueLines[0];
         currentDialogueLineIndex = 0;
 
-        PlayDialogueLine(currentDialogueLine);
+        //Set up ui
+        uiManager.OpenUI(ui_Dialogue);
 
+        PlayDialogueLine(currentDialogueLine);
     }
 
     public void NextDialogueLine()
@@ -103,13 +123,19 @@ public class DialogueManager : MonoBehaviour
     private void PlayDialogueLine(DialogueLine dialogueLine)
     {
         Debug.Log($"{dialogueLine.GetLineText()}");
+        ui_Dialogue.SetText(dialogueLine.GetLineText());
     }
 
     private void ResetDialogue()
     {
+        currentDialogue.OnDialogueEnded(dialogueInventory);
+
         currentDialogue = null;
         currentDialogueLine = null;
         currentDialogueLineIndex = 0;
         charIndex = 0;
+
+        ui_Dialogue.SetText("");
+        uiManager.CloseUi(ui_Dialogue);
     }
 }

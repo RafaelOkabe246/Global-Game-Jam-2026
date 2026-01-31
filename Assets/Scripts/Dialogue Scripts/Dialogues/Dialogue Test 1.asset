@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
   m_Name: Dialogue Test 1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  dialoguePriority: 0
+  dialoguePriority: 3
   dialogueLines:
   - lineText: Prioridade 0
   - lineText: Prioridade 0
