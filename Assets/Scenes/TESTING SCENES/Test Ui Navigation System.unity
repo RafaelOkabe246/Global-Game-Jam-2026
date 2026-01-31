@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterDialogues:
   - dialogue: {fileID: 11400000, guid: ab18b9f7e4daeaf43a52fc2ff32d9182, type: 2}
-    hasPlayed: 1
+    hasPlayed: 0
   - dialogue: {fileID: 11400000, guid: e0ccdb5079021ef4b9d9b25fb8b509c0, type: 2}
     hasPlayed: 0
 --- !u!4 &112425056
