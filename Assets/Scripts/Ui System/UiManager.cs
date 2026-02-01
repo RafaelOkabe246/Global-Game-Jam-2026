@@ -7,6 +7,7 @@ public class UiManager : MonoBehaviour
     public Ui_Dialogue ui_Dialogue;
     public JournalManager journalManager;
     public Ui_FinalAcusation ui_finalAcusation;
+    public Ui_FinalScreen finalSreen;
 
     public static UiManager instance;
     private void Awake()
@@ -21,7 +22,10 @@ public class UiManager : MonoBehaviour
 
     private void Initialize()
     {
-        journalManager = FindFirstObjectByType<JournalManager>(); 
+        journalManager = FindFirstObjectByType<JournalManager>();
+
+        finalSreen = FindFirstObjectByType<Ui_FinalScreen>();
+
         journalManager.CloseJournal();
         CloseUi(ui_Dialogue);
     }

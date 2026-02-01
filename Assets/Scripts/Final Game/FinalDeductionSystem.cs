@@ -56,6 +56,7 @@ public class FinalDeductionSystem : MonoBehaviour
         Debug.Log($"Final X desbloqueado {data.EndingName}");
         Debug.Log(data.EndingDescription);
         UiManager.instance.CloseUi(UiManager.instance.ui_finalAcusation);
+        UiManager.instance.OpenUI(UiManager.instance.finalSreen);
         DialogueManager.instance.SelectDialogue(data.EndingDialogue);
     }
 }
