@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int3,4,5_MascaraCerta
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "Fran Antonellil, Head de Finan\xE7as e Controladoria, Planejamento
+      Or\xE7ament\xE1rio, Estrat\xE9gia Financeira, Compliance Econ\xF4mico e Gest\xE3o
+      de Indicadores de Performance, desprazer em te conhecer! "
+  - lineText: O que quer?
+  - lineText: "A vereadora? N\xE3o, n\xE3o fiquei sabendo de nada. Agora sai que
+      tenho meeting online com a Pri."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: a564af27ce1903c45bafdd8c61b77ce7, type: 2}
+  dialogueResultsTips: []
