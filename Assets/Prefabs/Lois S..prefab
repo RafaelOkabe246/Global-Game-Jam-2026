@@ -10,8 +10,64 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2018219189247611623, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: m_Name
-      value: Base Character
+      value: Lois S.
       objectReference: {fileID: 0}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 99c09f40ba15bd447a346a929b728733, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[1].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a5be4b49b8002940b6b4249f28a4112, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a65d54885649508488ec9f9e30a5bccb, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[3].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: fb7130348e0bff9439ebe2984ca04f52, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[4].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: bd56539f159be10448f5e4af5d666891, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[5].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 1fe38df433a4ecb4c92e198b0bcb6559, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[6].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b85d12e7f888fa47b6c4a25d641fc60, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[7].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: b8539f70edf3e6e4ca5496a6be1e47b8, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[8].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 1009efd0d6d720242929bfc4f707ac8f, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[9].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d55f9ad568baa44eb645f4ceaa40930, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[10].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ebbbe03c3971bc4e835180e9f082510, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[11].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ba1e8b49a78695245bcc756264dd6795, type: 2}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterDialogues.Array.data[12].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 87023f9286201c14fa562f16e7a52aee, type: 2}
     - target: {fileID: 3484585855327516912, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +108,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7377242971225542122, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377242971225542122, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191588135892649920, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a28f9e7417e42bf43b4b2acd3e0cfa29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

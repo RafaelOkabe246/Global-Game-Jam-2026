@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int3,4,5_WeaponTipMethodTip
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 3
+  dialogueLines:
+  - lineText: "Voc\xEA acha que eu... a sufoquei? At\xE9 ela morrer?\r\n"
+  - lineText: "Tudo por conta de um m\xEDsero debate?"
+  - lineText: "Fale bem ou fale mal, mas fale de mim. Aquele debate me gerou muito
+      ibope, mesmo eu tendo tecnicamente perdido ele. Olhe no meu quarto, tem um
+      gr\xE1fico mostrando minhas visualiza\xE7\xF5es."
+  - lineText: "Eu deveria ter agradecido ela, n\xE3o matado! No final, n\xE3o fiz
+      nenhum dos dois."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: f1a55f348cd8eb04db7d0d637715667a, type: 2}
+  - {fileID: 11400000, guid: ea713b79081b75048a98b94bed5da885, type: 2}
+  - {fileID: 11400000, guid: e5570f2158ce2b547bb2c301797034f5, type: 2}
+  dialogueResultsTips: []

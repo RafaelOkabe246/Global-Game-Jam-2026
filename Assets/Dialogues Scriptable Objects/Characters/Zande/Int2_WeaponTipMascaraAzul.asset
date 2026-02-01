@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int2_WeaponTipMascaraAzul
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 2
+  dialogueLines:
+  - lineText: "Ah, ol\xE1! Que bom ver algu\xE9m t\xE3o amig\xE1vel por aqui!"
+  - lineText: "O que? Disseram que eu matei a vereadora enforcando-a? Isso... isso
+      \xE9 um disparate! Uma pantomima! Um sonho de uma noite de ver\xE3o!"
+  - lineText: "Nunca que eu faria isso... Al\xE9m disso, ouvi dizer que ela morreu
+      queimada!"
+  - lineText: "Fa\xE7a com essa informa\xE7\xE3o o que bem entender."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: e5570f2158ce2b547bb2c301797034f5, type: 2}
+  - {fileID: 11400000, guid: 2a1e143a74060dc47b0d85b03a53a06d, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: 8f5a2b1d642f8dc42a5e79fa57e0ea1e, type: 2}

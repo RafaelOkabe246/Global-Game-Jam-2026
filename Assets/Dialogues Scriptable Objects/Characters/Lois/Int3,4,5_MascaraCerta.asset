@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int3,4,5_MascaraCerta
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "O que deseja? Fale r\xE1pido, seja breve. Meu tempo \xE9 precioso
+      para gastar com tipos como voc\xEA.\r\n"
+  - lineText: "A vereadora? Ah sim, teve algo a ver com uma Porsche, mas s\xE3o apenas
+      rumores."
+  - lineText: "Olhe, n\xE3o tem muito o que dizer, ela morreu, e foi isso."
+  - lineText: "Agora saia, n\xE3o tenho mais o que falar."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: e5570f2158ce2b547bb2c301797034f5, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: 626ea242e91859248b263e7c479e332d, type: 2}

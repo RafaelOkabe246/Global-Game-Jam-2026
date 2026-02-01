@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int1_MascaraCertaVermelha
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "Fala truta! Que que tu t\xE1 precisando? Manda a real e fala r\xE1pido."
+  - lineText: "Aquela puta daquela vereadora que nunca fez nada pelo pov\xE3o?"
+  - lineText: Que se foda ela! Morreu enforcada, deve ter sofrido bastante!
+  - lineText: "Agora vaza, vai! J\xE1 perdi o interesse."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: f6561de1a92ae124aa724e9fb4ed8a8b, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: 2a1e143a74060dc47b0d85b03a53a06d, type: 2}

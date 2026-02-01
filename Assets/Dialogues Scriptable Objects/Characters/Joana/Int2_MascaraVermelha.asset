@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int2_MascaraVermelha
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "Ea\xED fela! Que que tu quer? Fala veloz que a m\xE3e t\xE1 com pressa."
+  - lineText: Aquela vereadora que foi de base?
+  - lineText: Safoda ela! Morreu queimada, se F U D E U!
+  - lineText: "Agora vaza, vai! J\xE1 perdi o interesse.\r\n"
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: f6561de1a92ae124aa724e9fb4ed8a8b, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: 8f5a2b1d642f8dc42a5e79fa57e0ea1e, type: 2}
