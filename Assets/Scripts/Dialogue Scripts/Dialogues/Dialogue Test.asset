@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   dialoguePriority: 1
   dialogueLines:
-  - lineText: Prioridade 1
-  - lineText: Prioridade 1
-  tipsConditions:
-  - {fileID: 11400000, guid: 752d37e2e1dd13748a10eee573d4770e, type: 2}
+  - lineText: Dialogo test
+  - lineText: "Recompensa com a informa\xE7\xE3o da motiva\xE7\xE3o"
+  dialogueTriggerConditions: []
+  dialogueResultsTips: []

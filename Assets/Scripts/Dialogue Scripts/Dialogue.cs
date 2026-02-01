@@ -5,12 +5,18 @@ public class Dialogue : ScriptableObject
 {
     public int dialoguePriority;
     public DialogueLine[] dialogueLines;
-    public Tip[] tipsConditions;
+    public Tip[] dialogueTriggerConditions;
 
-    private void Awake()
+    public Tip[] dialogueResultsTips;
+
+    private void OnValidate()
     {
         dialoguePriority = 0;
-        foreach (Tip tip in tipsConditions)
+
+        if (dialogueTriggerConditions.Length < 1)
+            return;
+
+        foreach (Tip tip in dialogueTriggerConditions)
         {
             dialoguePriority += tip.priority;
         }
@@ -18,9 +24,9 @@ public class Dialogue : ScriptableObject
 
     public bool CheckIfConditionsTrue(List<Tip> inventoryConditions)
     {
-        for (int i = 0; i < tipsConditions.Length; i++)
+        for (int i = 0; i < dialogueTriggerConditions.Length; i++)
         {
-            if (!inventoryConditions.Contains(tipsConditions[i]))
+            if (!inventoryConditions.Contains(dialogueTriggerConditions[i]))
             {
                 Debug.Log("FALSE CONDITION");
 
@@ -36,9 +42,12 @@ public class Dialogue : ScriptableObject
 
     }
 
-    public void OnDialogueEnded()
+    public void OnDialogueEnded(DialogueInventory dialogueInventory)
     {
-
+        foreach (Tip tip in dialogueResultsTips)
+        {
+            dialogueInventory.AddNewTip(tip);
+        }
     }
 
 }
