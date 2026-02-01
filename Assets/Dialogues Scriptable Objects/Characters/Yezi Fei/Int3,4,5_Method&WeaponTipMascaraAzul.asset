@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int3,4,5_Method&WeaponTipMascaraAzul
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 3
+  dialogueLines:
+  - lineText: "Voc\xEA ent\xE3o acha que eu... queimei a vereadora viva para impedir
+      que ela interferisse nas minhas atividades de garimpo ilegal?"
+  - lineText: "Olha... eu at\xE9 te contrataria. \xC9 uma \xF3tima ideia... que eu
+      infelizmente n\xE3o tive."
+  - lineText: "N\xE3o sei como te dizer isso mas... eu n\xE3o tive nada a ver com
+      a morte dela."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: e5570f2158ce2b547bb2c301797034f5, type: 2}
+  - {fileID: 11400000, guid: 8f5a2b1d642f8dc42a5e79fa57e0ea1e, type: 2}
+  - {fileID: 11400000, guid: ae9e5cf187994674e8aa5641a5e4e42f, type: 2}
+  dialogueResultsTips: []

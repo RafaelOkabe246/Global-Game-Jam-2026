@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int1_MascaraCerta
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "Ah sim, n\xE3o sabia que esse baile virou creche! Fran Antonelli,
+      Head de Finan\xE7as e Controladoria, Planejamento Or\xE7ament\xE1rio, Estrat\xE9gia
+      Financeira, Compliance Econ\xF4mico e Gest\xE3o de Indicadores de Performance,
+      desprazer em te conhecer!"
+  - lineText: "A vereadora que morreu? Estat\xEDstica, meu caro, que nem minhas a\xE7\xF5es
+      que ca\xEDram ontem! \xC0s vezes voc\xEA sobe, que nem eu, e \xE0s vezes desce,
+      que nem ela, hahaha!"
+  - lineText: "\xC9, dizem que mataram ela com um machado! Eu tamb\xE9m fa\xE7o esse
+      tipo de coisa, mas \xE9 tudo corte de gasto, hahaha!"
+  - lineText: "Agora vai, tenho uma reuni\xE3o com o massagista do meu Koi de 3 milh\xF5es."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: a564af27ce1903c45bafdd8c61b77ce7, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: f1a55f348cd8eb04db7d0d637715667a, type: 2}
