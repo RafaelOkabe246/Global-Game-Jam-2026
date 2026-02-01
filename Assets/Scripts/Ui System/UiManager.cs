@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class UiManager : MonoBehaviour
 {
     public Ui_Dialogue ui_Dialogue;
-    
+    public JournalManager journalManager;
+    public Ui_FinalAcusation ui_finalAcusation;
 
     public static UiManager instance;
     private void Awake()
@@ -13,15 +14,27 @@ public class UiManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        journalManager = FindFirstObjectByType<JournalManager>(); 
+        journalManager.CloseJournal();
+        CloseUi(ui_Dialogue);
+    }
 
     public void OpenUI(Ui_Element ui_Element)
     {
+        Debug.Log("Open");
+        ui_Element.OpenUiElement();
         ui_Element.onOpenEvent?.Invoke();
-        ui_Element.gameObject.SetActive(true);
     }
 
     public void CloseUi(Ui_Element ui_Element)
     {
-        ui_Element.gameObject.SetActive(false);
+        ui_Element.CloseUiElement();
     }
 }

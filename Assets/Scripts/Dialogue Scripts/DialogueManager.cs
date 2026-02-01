@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Character character1;
-
     public static DialogueManager instance;
 
     private DialogueInventory dialogueInventory;
@@ -32,8 +30,6 @@ public class DialogueManager : MonoBehaviour
         dialogueInventory = DialogueInventory.instance;
 
         ui_Dialogue = uiManager.ui_Dialogue;
-
-        SelectDialogue(character1);
     }
 
     private CharacterDialogue CheckConditionAndPriority(Character character)
@@ -108,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         if(nextLineIndex >= maxIndex)
         {
             Debug.Log("End dialogue");
-            ResetDialogue();
+            EndDialogue();
             return;
         }
 
@@ -126,10 +122,14 @@ public class DialogueManager : MonoBehaviour
         ui_Dialogue.SetText(dialogueLine.GetLineText());
     }
 
-    private void ResetDialogue()
+    private void EndDialogue()
     {
         currentDialogue.OnDialogueEnded(dialogueInventory);
 
+        foreach (Tip tip in currentDialogue.dialogueResultsTips)
+        { 
+            JournalManager.instance.AddJournalEntry(tip);
+        }
         currentDialogue = null;
         currentDialogueLine = null;
         currentDialogueLineIndex = 0;
@@ -137,5 +137,7 @@ public class DialogueManager : MonoBehaviour
 
         ui_Dialogue.SetText("");
         uiManager.CloseUi(ui_Dialogue);
+
+        ActionsManager.instance.SpendAction();
     }
 }

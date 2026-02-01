@@ -5,14 +5,22 @@ using System.Linq;
 
 public class JournalManager : MonoBehaviour
 {
-    public GameObject journalUI;
+    public static JournalManager instance;
+
+    public Ui_Journal journalUI;
 
     public List<JournalEntry> journalEntries = new List<JournalEntry>();
+   
     public JournalEntry journalEntryPrefab;
     public GameObject pagesPanel;
 
-    //public List<JournalEntry> allEntries;
     private int currentEntryIndex = 0;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void AddJournalEntry(Tip newTip)
     {
@@ -30,20 +38,21 @@ public class JournalManager : MonoBehaviour
 
         //Senão instantiate new
 
-        JournalEntry journalEntry = Instantiate(journalEntryPrefab);
-        journalEntry.gameObject.transform.SetParent(pagesPanel.transform);
-        journalEntry.Initiate(newTip.tipOrigin);
+        //JournalEntry journalEntry = Instantiate(journalEntryPrefab);
+        //journalEntry.gameObject.transform.SetParent(pagesPanel.transform);
+        //journalEntry.Initiate(newTip.tipOrigin);
     }
 
     public void OpenJournal()
     {
-        journalUI.SetActive(true);
-        DisplayEntry(0); // Display the first entry when opened
+        journalUI.OpenUiElement();
+
+        //DisplayEntry(0); // Display the first entry when opened
     }
 
     public void CloseJournal()
     {
-        journalUI.SetActive(false);
+        journalUI.CloseUiElement();
     }
 
     public void DisplayEntry(int index)
@@ -59,12 +68,12 @@ public class JournalManager : MonoBehaviour
 
     public void NextEntry()
     {
-        DisplayEntry(currentEntryIndex + 1);
+        //DisplayEntry(currentEntryIndex + 1);
     }
 
     public void PreviousEntry()
     {
-        DisplayEntry(currentEntryIndex - 1);
+       // DisplayEntry(currentEntryIndex - 1);
     }
 
 }

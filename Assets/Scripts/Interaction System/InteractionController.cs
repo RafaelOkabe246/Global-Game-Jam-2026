@@ -1,9 +1,12 @@
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class InteractionController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
 {
+    public UnityEvent OnInteractionEvent;
+
     private float m_holdDuration = 1f;
 
     private bool m_isPressed = false;
