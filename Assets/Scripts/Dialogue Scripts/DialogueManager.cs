@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     private UiManager uiManager;
     private Ui_Dialogue ui_Dialogue;
 
+    [SerializeField]private Character currentCharacter;
     private Dialogue currentDialogue;
     private DialogueLine currentDialogueLine;
     private int currentDialogueLineIndex;
@@ -76,11 +77,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (dialogue.CheckIfConditionsTrue(dialogueInventory.inventoryTips))
-        {
-            characterDialogue.hasPlayed = true;
-            OnStartDialogue(dialogue);
-        }
+        currentCharacter = character;
+
+        Debug.Log("Set dialogue true");
+        characterDialogue.hasPlayed = true;
+        OnStartDialogue(dialogue);
 
     }
 
@@ -126,10 +127,16 @@ public class DialogueManager : MonoBehaviour
     {
         currentDialogue.OnDialogueEnded(dialogueInventory);
 
-        foreach (Tip tip in currentDialogue.dialogueResultsTips)
-        { 
-            JournalManager.instance.AddJournalEntry(tip);
+        if(currentDialogue.dialogueResultsTips.Length > 0)
+        {
+            foreach (Tip tip in currentDialogue.dialogueResultsTips)
+            {
+                JournalManager.instance.AddJournalEntry(tip, currentCharacter);
+            }
         }
+
+
+
         currentDialogue = null;
         currentDialogueLine = null;
         currentDialogueLineIndex = 0;

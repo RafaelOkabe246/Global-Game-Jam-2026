@@ -15,6 +15,5 @@ public class Ui_Element : MonoBehaviour
     public virtual void CloseUiElement()
     {
         gameObject.SetActive(false);
-
     }
 }

@@ -28,7 +28,6 @@ public class UiManager : MonoBehaviour
 
     public void OpenUI(Ui_Element ui_Element)
     {
-        Debug.Log("Open");
         ui_Element.OpenUiElement();
         ui_Element.onOpenEvent?.Invoke();
     }

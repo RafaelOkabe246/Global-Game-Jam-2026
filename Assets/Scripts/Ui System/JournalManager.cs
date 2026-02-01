@@ -16,25 +16,39 @@ public class JournalManager : MonoBehaviour
 
     private int currentEntryIndex = 0;
 
+    public JournalLine journalLinePrefab;
 
     private void Awake()
     {
         instance = this;
     }
 
-    public void AddJournalEntry(Tip newTip)
+    public void UpdateJournal()
     {
+        List<Tip> tips = DialogueInventory.instance.inventoryTips;
+
+
+    }
+
+    public void AddJournalEntry(Tip newTip, Character characterThatGaveTheTip)
+    {
+        JournalLine journalLine = Instantiate(journalLinePrefab);
+        journalLine.lineText.text = newTip.tipText;
+        journalLine.transform.SetParent
+            (pagesPanel.transform);
+        journalLine.SetIcon(characterThatGaveTheTip.characterPortraitIcon);
+
         //Verifica se já existe journal entry com a fonte/origem
 
-        for (int i = 0; i < journalEntries.Count; i++)
-        {
-            if(journalEntries[i].tipOrigin == newTip.tipOrigin)
-            {
-                //Já tem entry
-                journalEntries[i].AddNewJournalLine(newTip.tipText);
-                return;
-            }
-        }
+        //for (int i = 0; i < journalEntries.Count; i++)
+        //{
+        //    if(journalEntries[i].tipOrigin == newTip.tipOrigin)
+        //    {
+        //        //Já tem entry
+        //        journalEntries[i].AddNewJournalLine(newTip.tipText);
+        //        return;
+        //    }
+        //}
 
         //Senão instantiate new
 
