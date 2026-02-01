@@ -7794,13 +7794,14 @@ GameObject:
   - component: {fileID: 1759334650}
   - component: {fileID: 1759334649}
   - component: {fileID: 1759334651}
+  - component: {fileID: 1759334652}
   m_Layer: 5
   m_Name: Final DEDUCTION UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1759334648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7877,6 +7878,19 @@ MonoBehaviour:
   onOpenEvent:
     m_PersistentCalls:
       m_Calls: []
+  journalUI: {fileID: 0}
+--- !u!225 &1759334652
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759334647}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1785006080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,6 +7921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionsManager
   actions: 1
+  gameEnded: 0
   OnEndGame:
     m_PersistentCalls:
       m_Calls:

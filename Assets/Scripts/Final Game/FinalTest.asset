@@ -17,3 +17,4 @@ MonoBehaviour:
   Weapon: {fileID: 11400000, guid: 64e371e2a656e4c4288ab96098998d08, type: 2}
   Motivation: {fileID: 11400000, guid: 398aef418c5372d46bee9c1c08da2ef5, type: 2}
   EndingDescription: Final verdura
+  EndingDialogue: {fileID: 11400000, guid: 8bfc9ca03bb92b040888eaba97ce4306, type: 2}
