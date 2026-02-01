@@ -7,7 +7,8 @@ public enum ItemID { Nenhum, Faca, dica1, joao, }
 [System.Serializable]
 public struct ItemInfo
 {
-    public ItemID Id;
+    public Tip tipInfo;
+    //public ItemID Id;
     public ItemCategory Category;
     public Sprite Icon;
 }

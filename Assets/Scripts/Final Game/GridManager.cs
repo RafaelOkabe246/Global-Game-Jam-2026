@@ -17,7 +17,7 @@ public class GridManager : MonoBehaviour
     {
         Instance = this;
     }
-
+    /*
     public void UpdateGrid(List<ItemID> coletados)
     {
         foreach (Transform child in GridParent) Destroy(child.gameObject);
@@ -36,6 +36,35 @@ public class GridManager : MonoBehaviour
             }
         }
     }
+    */
+    public void UpdateGrid()
+    {
+        List<Tip> coletados = new List<Tip>();
+         coletados=   DialogueInventory.instance.inventoryTips; 
+
+        foreach (Transform child in GridParent) Destroy(child.gameObject);
+
+        foreach (Tip id in coletados)
+        {
+            Debug.Log($"Tip name {id.name}");
+            ItemInfo info = System.Array.Find(Database.AllItems, x => x.tipInfo == id);
+            if (info.Icon != null)
+            {
+                GameObject novoItem = Instantiate(ItemPrefab, GridParent);
+                novoItem.transform.localScale = Vector3.one;
+                novoItem.transform.localPosition = Vector3.zero;
+
+                var script = novoItem.GetComponent<EvidenceItem>();
+                script.Setup(info);
+            }
+        }
+    }
+
+
+
+
+
+
 
     public void MoveItem(EvidenceItem item)
     {

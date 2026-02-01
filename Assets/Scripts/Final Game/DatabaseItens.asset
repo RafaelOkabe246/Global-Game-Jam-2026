@@ -13,15 +13,12 @@ MonoBehaviour:
   m_Name: DatabaseItens
   m_EditorClassIdentifier: Assembly-CSharp::ItemDatabase
   AllItems:
-  - Id: 0
+  - tipInfo: {fileID: 11400000, guid: a9999b79186a07743a4c1c84005cdd46, type: 2}
     Category: 0
     Icon: {fileID: 8323118199210038779, guid: 4732eb518e300db4ca769709a32bdefa, type: 3}
-  - Id: 1
+  - tipInfo: {fileID: 11400000, guid: 64e371e2a656e4c4288ab96098998d08, type: 2}
     Category: 1
     Icon: {fileID: 7934499733401412109, guid: 4732eb518e300db4ca769709a32bdefa, type: 3}
-  - Id: 2
+  - tipInfo: {fileID: 11400000, guid: 398aef418c5372d46bee9c1c08da2ef5, type: 2}
     Category: 2
     Icon: {fileID: -1561993231538383922, guid: 4732eb518e300db4ca769709a32bdefa, type: 3}
-  - Id: 3
-    Category: 0
-    Icon: {fileID: -3829526281175001841, guid: 4732eb518e300db4ca769709a32bdefa, type: 3}

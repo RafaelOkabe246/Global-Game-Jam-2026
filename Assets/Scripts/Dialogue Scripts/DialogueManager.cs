@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     private int currentDialogueLineIndex;
     private int charIndex;
 
-    
+    private UnityEvent OnEndDialogueEvent; 
 
     private void Awake()
     {
@@ -65,8 +66,10 @@ public class DialogueManager : MonoBehaviour
         return returnCharacterDialogue;
     }
 
-    public void SelectDialogue(Character character)
+    public void SelectDialogue(Character character, UnityEvent onEndDialogueEvent = null)
     {
+        onEndDialogueEvent = OnEndDialogueEvent;
+
         //Check the conditions and stuff to return the dialogue
         CharacterDialogue characterDialogue = CheckConditionAndPriority(character);//character.characterDialogues[0];
         Dialogue dialogue = characterDialogue.dialogue;
@@ -85,9 +88,10 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void SelectDialogue(Dialogue dialogue)
+    public void SelectDialogue(Dialogue dialogue,UnityEvent onEndDialogueEvent = null)
     {
-        
+        onEndDialogueEvent = OnEndDialogueEvent;
+
         OnStartDialogue(dialogue);
 
     }
@@ -152,6 +156,7 @@ public class DialogueManager : MonoBehaviour
         ui_Dialogue.SetText("");
         uiManager.CloseUi(ui_Dialogue);
 
+        OnEndDialogueEvent?.Invoke();
         ActionsManager.instance.SpendAction();
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FinalTest
   m_EditorClassIdentifier: Assembly-CSharp::EndingsSO
   EndingName: Teste de final
-  Culprit: 3
-  Weapon: 1
-  Motivation: 2
+  Culprit: {fileID: 11400000, guid: a9999b79186a07743a4c1c84005cdd46, type: 2}
+  Weapon: {fileID: 11400000, guid: 64e371e2a656e4c4288ab96098998d08, type: 2}
+  Motivation: {fileID: 11400000, guid: 398aef418c5372d46bee9c1c08da2ef5, type: 2}
   EndingDescription: Final verdura

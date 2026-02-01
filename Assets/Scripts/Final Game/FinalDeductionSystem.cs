@@ -24,10 +24,13 @@ public class FinalDeductionSystem : MonoBehaviour
             return;
         }
 
-        ItemID ocupiedId = manager.OcupiedSlot.CurrentItem.Id;
-        ItemID weaponId = manager.WeaponSlot.CurrentItem.Id;
-        ItemID motivationId = manager.MotivationSlot.CurrentItem.Id;
-
+        //ItemID ocupiedId = manager.OcupiedSlot.CurrentItem.Id;
+        //ItemID weaponId = manager.WeaponSlot.CurrentItem.Id;
+        //ItemID motivationId = manager.MotivationSlot.CurrentItem.Id;
+        Tip ocupiedId = manager.OcupiedSlot.CurrentItem.tipId;
+        Tip weaponId = manager.WeaponSlot.CurrentItem.tipId;
+        Tip motivationId = manager.MotivationSlot.CurrentItem.tipId;
+        
         bool foundEnding = false;
 
         foreach (EndingsSO ending in PossibleEndings)
@@ -52,5 +55,7 @@ public class FinalDeductionSystem : MonoBehaviour
     {
         Debug.Log($"Final X desbloqueado {data.EndingName}");
         Debug.Log(data.EndingDescription);
+        UiManager.instance.CloseUi(UiManager.instance.ui_finalAcusation);
+        DialogueManager.instance.SelectDialogue(data.EndingDialogue);
     }
 }

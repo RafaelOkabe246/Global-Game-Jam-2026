@@ -13,9 +13,21 @@ public class DialogueInventory : MonoBehaviour
     public Tip mascaraAmarela;
     public Tip mascaraAzul;
 
+    private GridManager gridManager;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        gridManager = GridManager.Instance;
+    }
+
+    public void CreateListOfItemsColetados()
+    {
+
     }
 
     public void SelecteNewMascara(MascarasTypes mascara)

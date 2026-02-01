@@ -24,6 +24,6 @@ public class GridTester : MonoBehaviour //Esse script serve apenas para testar o
             return;
         }
 
-        GridManager.UpdateGrid(ItensToTest);
+        //GridManager.UpdateGrid(ItensToTest);
     }
 }
