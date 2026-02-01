@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int2_MascaraAmarela
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 1
+  dialogueLines:
+  - lineText: "Ah, olha s\xF3 quem veio praticamente rastejando at\xE9 mim. "
+  - lineText: O que precisa de mim?
+  - lineText: A vereadora? A que tentou cancelar criptomoedas?
+  - lineText: "\xC9, ela fez muitos inimigos aquele dia."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: a564af27ce1903c45bafdd8c61b77ce7, type: 2}
+  dialogueResultsTips:
+  - {fileID: 11400000, guid: 2d5d352358e4bad46b890ce013e961ab, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int2_WeaponTipMascaraAmarela
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 2
+  dialogueLines:
+  - lineText: "\xC9 o que? T\xE3o falando que EU atirei naquela PUTA daquela vereadora?"
+  - lineText: "N\xE3o tem NADA a ver! Quem foi o filha da puta que espalhou essa
+      merda?\r\n"
+  - lineText: "Nem tem como ter sido eu. Minha AK-47 t\xE1 trancada no meu quarto!
+      Pode ir l\xE1 checar!"
+  - lineText: "S\xF3 n\xE3o pega nela..."
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: a564af27ce1903c45bafdd8c61b77ce7, type: 2}
+  - {fileID: 11400000, guid: ac223b4f7e3ab734185c354a25486030, type: 2}
+  dialogueResultsTips: []

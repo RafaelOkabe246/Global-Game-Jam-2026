@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
+  m_Name: Int3,4,5_Method&WeaponTipMascaraVermelha
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  dialoguePriority: 3
+  dialogueLines:
+  - lineText: "Cara... n\xE3o fui eu que matei ela. Eu juro! "
+  - lineText: "N\xE3o faria sentido eu matar ela... ia trazer tanto problema pra
+      mim. E n\xE3o ia resolver, j\xE1 que a lei j\xE1 passou!"
+  - lineText: "Voc\xEA precisa confiar em mim, s\xE9rio!"
+  dialogueTriggerConditions:
+  - {fileID: 11400000, guid: f6561de1a92ae124aa724e9fb4ed8a8b, type: 2}
+  - {fileID: 11400000, guid: ac223b4f7e3ab734185c354a25486030, type: 2}
+  - {fileID: 11400000, guid: ee8ec15790a591c41b699ef523294402, type: 2}
+  dialogueResultsTips: []

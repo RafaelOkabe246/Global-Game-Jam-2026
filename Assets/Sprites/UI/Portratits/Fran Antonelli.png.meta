@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8257f2b75b41fa1409997fb55087912e
+guid: d25ca3d90c0047040850a7b78b471a8b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,9 +129,9 @@ TextureImporter:
       name: Fran Antonelli_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 8
         y: 0
-        width: 106
+        width: 120
         height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
