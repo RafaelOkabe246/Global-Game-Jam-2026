@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class DialogueInventory : MonoBehaviour
 {
@@ -15,6 +17,12 @@ public class DialogueInventory : MonoBehaviour
 
     private GridManager gridManager;
 
+    public Image mascaraIcon;
+    public Sprite mascaraVermelhaIcon;
+    public Sprite mascaraAmarelaIcon;
+    public Sprite mascaraAzulIcon;
+
+
     private void Awake()
     {
         instance = this;
@@ -23,6 +31,7 @@ public class DialogueInventory : MonoBehaviour
     private void Start()
     {
         gridManager = GridManager.Instance;
+        SelecteNewMascara("Azul");
     }
 
     public void CreateListOfItemsColetados()
@@ -30,22 +39,48 @@ public class DialogueInventory : MonoBehaviour
 
     }
 
-    public void SelecteNewMascara(MascarasTypes mascara)
+    MascarasTypes mascara = MascarasTypes.Amarela;
+    public void SelecteNewMascara(string mascaraTipo)
     {
+        if (mascaraTipo == "Azul")
+        {
+            mascara = MascarasTypes.Azul;
+        }
+        if (mascaraTipo == "Amarela")
+        {
+            mascara = MascarasTypes.Amarela;
+        }
+        if (mascaraTipo == "Vermelha")
+        {
+            mascara = MascarasTypes.Vermelha;
+        }
+
         switch (mascara)
         {
             case MascarasTypes.Amarela:
                 currentMascara = mascaraAmarela;
+                mascaraIcon.sprite = mascaraAmarelaIcon;
+                if (!inventoryTips.Contains(mascaraAmarela))
+                    inventoryTips.Add(mascaraAmarela);
                 inventoryTips.Remove(mascaraAzul);
                 inventoryTips.Remove(mascaraVermelha);
                 break;
             case MascarasTypes.Vermelha:
                 currentMascara = mascaraVermelha;
+                mascaraIcon.sprite = mascaraVermelhaIcon;
+                if (!inventoryTips.Contains(mascaraVermelha))
+                    inventoryTips.Add(mascaraVermelha);
+
                 inventoryTips.Remove(mascaraAzul);
                 inventoryTips.Remove(mascaraAmarela);
                 break;
             case MascarasTypes.Azul:
                 currentMascara = mascaraAzul;
+                mascaraIcon.sprite = mascaraAzulIcon;
+                
+                if(!inventoryTips.Contains(mascaraAzul))
+                    inventoryTips.Add(mascaraAzul);
+
                 inventoryTips.Remove(mascaraAmarela);
                 inventoryTips.Remove(mascaraVermelha);
                 break;

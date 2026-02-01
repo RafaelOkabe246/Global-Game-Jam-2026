@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
+using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
@@ -18,7 +19,10 @@ public class DialogueManager : MonoBehaviour
     private int currentDialogueLineIndex;
     private int charIndex;
 
-    private UnityEvent OnEndDialogueEvent; 
+    private UnityEvent OnEndDialogueEvent;
+
+    public Image portrait; 
+    public TextMeshProUGUI characterNameText;
 
     private void Awake()
     {
@@ -61,7 +65,7 @@ public class DialogueManager : MonoBehaviour
                 biggestPriorityDick = dialoguesConditionTrue[i].dialogue.dialoguePriority;
             }
         }
-
+        Debug.Log("priority index "+biggestPriorityDickIndex);
         CharacterDialogue returnCharacterDialogue = dialoguesConditionTrue[biggestPriorityDickIndex];
         return returnCharacterDialogue;
     }
@@ -84,6 +88,10 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Set dialogue true");
         characterDialogue.hasPlayed = true;
+
+        portrait.sprite = currentCharacter.characterPortraitIcon;
+
+        characterNameText.text = currentCharacter.gameObject.name;
         OnStartDialogue(dialogue);
 
     }
@@ -91,7 +99,8 @@ public class DialogueManager : MonoBehaviour
     public void SelectDialogue(Dialogue dialogue,UnityEvent onEndDialogueEvent = null)
     {
         onEndDialogueEvent = OnEndDialogueEvent;
-
+        portrait.sprite = null;
+        characterNameText.text = "";
         OnStartDialogue(dialogue);
 
     }

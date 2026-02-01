@@ -13,6 +13,10 @@ PrefabInstance:
       value: Yezi Fei
       objectReference: {fileID: 0}
     - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterPortraitIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: f95423ba64676f741b4c29572657ef20, type: 3}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: characterDialogues.Array.size
       value: 20
       objectReference: {fileID: 0}

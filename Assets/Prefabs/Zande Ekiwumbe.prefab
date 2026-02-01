@@ -13,6 +13,10 @@ PrefabInstance:
       value: Zande Ekiwumbe
       objectReference: {fileID: 0}
     - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
+      propertyPath: characterPortraitIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fb8759c31b793340a46017db443381f, type: 3}
+    - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: characterDialogues.Array.size
       value: 20
       objectReference: {fileID: 0}

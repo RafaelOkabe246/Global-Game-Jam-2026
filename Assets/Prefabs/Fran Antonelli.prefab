@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: characterPortraitIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 8257f2b75b41fa1409997fb55087912e, type: 3}
+      objectReference: {fileID: 21300000, guid: d25ca3d90c0047040850a7b78b471a8b, type: 3}
     - target: {fileID: 2132439284219557700, guid: 7f749d5331dd4a94db96a11df386d8fa, type: 3}
       propertyPath: characterDialogues.Array.size
       value: 14
