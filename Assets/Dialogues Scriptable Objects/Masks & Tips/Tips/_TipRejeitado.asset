@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31758fc8145b1e742937ceaadb6d75a4, type: 3}
   m_Name: _TipRejeitado
   m_EditorClassIdentifier: Assembly-CSharp::Tip
-  tipText: 
+  tipText: "Aparentemente a vereadora rejeitou os avan\xE7os rom\xE2nticos de algu\xE9m...
+    que matou ela depois."
   priority: 1
   tipOrigin: {fileID: 0}
