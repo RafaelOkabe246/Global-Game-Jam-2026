@@ -9,9 +9,13 @@ public class Dialogue : ScriptableObject
 
     public Tip[] dialogueResultsTips;
 
-    private void Awake()
+    private void OnValidate()
     {
         dialoguePriority = 0;
+
+        if (dialogueTriggerConditions.Length < 1)
+            return;
+
         foreach (Tip tip in dialogueTriggerConditions)
         {
             dialoguePriority += tip.priority;
