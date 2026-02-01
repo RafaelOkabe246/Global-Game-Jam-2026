@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Motivo citada
   m_EditorClassIdentifier: Assembly-CSharp::Tip
   tipText: Faca foi citada
+  priority: 1

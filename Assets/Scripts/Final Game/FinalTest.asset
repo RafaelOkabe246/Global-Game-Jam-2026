@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31758fc8145b1e742937ceaadb6d75a4, type: 3}
-  m_Name: Arma faca citada
-  m_EditorClassIdentifier: Assembly-CSharp::Tip
-  tipText: Faca foi citada
-  priority: 1
+  m_Script: {fileID: 11500000, guid: 2731a9714c956fa4b96ec61291f58aae, type: 3}
+  m_Name: FinalTest
+  m_EditorClassIdentifier: Assembly-CSharp::EndingsSO
+  EndingName: Teste de final
+  Culprit: 3
+  Weapon: 1
+  Motivation: 2
+  EndingDescription: Final verdura
