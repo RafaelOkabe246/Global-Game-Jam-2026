@@ -13,6 +13,10 @@ public class SoundSystem : MonoBehaviour
     [Range(0.0001f, 1f)] public float MusicVolume = 0.5f;
     [Range(0.0001f, 1f)] public float SFXVolume = 0.5f;
 
+    [Header("Audio Sources")]
+    public AudioSource MusicSource;
+    public AudioSource SFXSource;
+
     private void Awake()
     {
         if (Instance != null)
@@ -61,5 +65,20 @@ public class SoundSystem : MonoBehaviour
         SetMasterVolume(PlayerPrefs.GetFloat("MasterVolume", 0.5f));
         SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", 0.5f));
         SetSFXVolume(PlayerPrefs.GetFloat("SFXVolume", 0.5f));
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (MusicSource.clip == clip)
+        {
+            return;    
+        }
+        MusicSource.clip = clip;
+        MusicSource.Play();
     }
 }
