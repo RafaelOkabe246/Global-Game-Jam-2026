@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31758fc8145b1e742937ceaadb6d75a4, type: 3}
   m_Name: _TipMetralha
   m_EditorClassIdentifier: Assembly-CSharp::Tip
-  tipText: 
+  tipText: Rumores dizem que mataram a vereadora a tiros.
   priority: 1
   tipOrigin: {fileID: 0}

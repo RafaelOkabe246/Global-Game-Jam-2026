@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31758fc8145b1e742937ceaadb6d75a4, type: 3}
   m_Name: _TipGarimpo
   m_EditorClassIdentifier: Assembly-CSharp::Tip
-  tipText: 
+  tipText: "Algu\xE9m ligado ao garimpo n\xE3o gostou que a vereadora deixou as leis
+    mais r\xEDgidas."
   priority: 1
   tipOrigin: {fileID: 0}

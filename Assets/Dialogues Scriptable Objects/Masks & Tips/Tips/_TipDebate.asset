@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31758fc8145b1e742937ceaadb6d75a4, type: 3}
   m_Name: _TipDebate
   m_EditorClassIdentifier: Assembly-CSharp::Tip
-  tipText: 
+  tipText: "Alguma celebridade pol\xEDtica da internet perdeu num debate para a vereadora."
   priority: 1
   tipOrigin: {fileID: 0}
