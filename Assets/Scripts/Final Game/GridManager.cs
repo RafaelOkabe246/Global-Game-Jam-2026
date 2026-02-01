@@ -50,13 +50,14 @@ public class GridManager : MonoBehaviour
             ItemInfo info = System.Array.Find(Database.AllItems, x => x.tipInfo == id);
             if (info.Icon != null)
             {
-                GameObject novoItem = Instantiate(ItemPrefab, GridParent);
-                novoItem.transform.localScale = Vector3.one;
-                novoItem.transform.localPosition = Vector3.zero;
 
-                var script = novoItem.GetComponent<EvidenceItem>();
-                script.Setup(info);
             }
+            GameObject novoItem = Instantiate(ItemPrefab, GridParent);
+            novoItem.transform.localScale = Vector3.one;
+            novoItem.transform.localPosition = Vector3.zero;
+
+            var script = novoItem.GetComponent<EvidenceItem>();
+            script.Setup(info);
         }
     }
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FinalTest
   m_EditorClassIdentifier: Assembly-CSharp::EndingsSO
   EndingName: Teste de final
-  Culprit: {fileID: 11400000, guid: a9999b79186a07743a4c1c84005cdd46, type: 2}
-  Weapon: {fileID: 11400000, guid: 64e371e2a656e4c4288ab96098998d08, type: 2}
-  Motivation: {fileID: 11400000, guid: 398aef418c5372d46bee9c1c08da2ef5, type: 2}
+  Culprit: {fileID: 11400000, guid: 2d5d352358e4bad46b890ce013e961ab, type: 2}
+  Weapon: {fileID: 11400000, guid: 626ea242e91859248b263e7c479e332d, type: 2}
+  Motivation: {fileID: 11400000, guid: 2d5d352358e4bad46b890ce013e961ab, type: 2}
   EndingDescription: Final verdura
   EndingDialogue: {fileID: 11400000, guid: 8bfc9ca03bb92b040888eaba97ce4306, type: 2}
