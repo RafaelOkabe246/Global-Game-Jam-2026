@@ -85,6 +85,13 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    public void SelectDialogue(Dialogue dialogue)
+    {
+        
+        OnStartDialogue(dialogue);
+
+    }
+
     public void OnStartDialogue(Dialogue dialogue)
     {
         currentDialogue = dialogue;

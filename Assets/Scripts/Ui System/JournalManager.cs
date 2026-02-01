@@ -9,12 +9,11 @@ public class JournalManager : MonoBehaviour
 
     public Ui_Journal journalUI;
 
-    public List<JournalEntry> journalEntries = new List<JournalEntry>();
-   
-    public JournalEntry journalEntryPrefab;
-    public GameObject pagesPanel;
+    [SerializeField] private bool firstOpen;
+    public Dialogue journalTutorialDialogue;
 
-    private int currentEntryIndex = 0;
+    public GameObject pagesPanel;
+    public GameObject newEntryIcon;
 
     public JournalLine journalLinePrefab;
 
@@ -23,11 +22,10 @@ public class JournalManager : MonoBehaviour
         instance = this;
     }
 
-    public void UpdateJournal()
+    private void Start()
     {
-        List<Tip> tips = DialogueInventory.instance.inventoryTips;
-
-
+        firstOpen = false;
+        newEntryIcon.SetActive(false);
     }
 
     public void AddJournalEntry(Tip newTip, Character characterThatGaveTheTip)
@@ -38,56 +36,28 @@ public class JournalManager : MonoBehaviour
             (pagesPanel.transform);
         journalLine.SetIcon(characterThatGaveTheTip.characterPortraitIcon);
 
-        //Verifica se já existe journal entry com a fonte/origem
-
-        //for (int i = 0; i < journalEntries.Count; i++)
-        //{
-        //    if(journalEntries[i].tipOrigin == newTip.tipOrigin)
-        //    {
-        //        //Já tem entry
-        //        journalEntries[i].AddNewJournalLine(newTip.tipText);
-        //        return;
-        //    }
-        //}
-
-        //Senão instantiate new
-
-        //JournalEntry journalEntry = Instantiate(journalEntryPrefab);
-        //journalEntry.gameObject.transform.SetParent(pagesPanel.transform);
-        //journalEntry.Initiate(newTip.tipOrigin);
+        //Activate icon effect
+        newEntryIcon.SetActive(true);
     }
 
     public void OpenJournal()
     {
         journalUI.OpenUiElement();
 
-        //DisplayEntry(0); // Display the first entry when opened
+        if (!firstOpen)
+        {
+            //Play tutorial dialogue
+            DialogueManager.instance.SelectDialogue(journalTutorialDialogue);
+            firstOpen = true;
+        }
     }
 
     public void CloseJournal()
     {
+        newEntryIcon.SetActive(false);
         journalUI.CloseUiElement();
+
     }
 
-    public void DisplayEntry(int index)
-    {
-        //if (index >= 0 && index < allEntries.Count)
-        //{
-        //    currentEntryIndex = index;
-        //    JournalEntry entry = allEntries[currentEntryIndex];
-        //    titleText.text = entry.entryTitle;
-        //    contentText.text = entry.entryContent;
-        //}
-    }
-
-    public void NextEntry()
-    {
-        //DisplayEntry(currentEntryIndex + 1);
-    }
-
-    public void PreviousEntry()
-    {
-       // DisplayEntry(currentEntryIndex - 1);
-    }
 
 }

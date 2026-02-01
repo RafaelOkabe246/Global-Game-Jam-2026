@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309aafd488e2dd840974a6147af9c4a4, type: 3}
   m_Name: Dialogue Test
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  dialoguePriority: 0
+  dialoguePriority: 1
   dialogueLines:
   - lineText: Dialogo test
   - lineText: "Recompensa com a informa\xE7\xE3o da motiva\xE7\xE3o"
-  dialogueTriggerConditions:
-  - {fileID: 11400000, guid: 752d37e2e1dd13748a10eee573d4770e, type: 2}
-  dialogueResultsTips:
-  - {fileID: 11400000, guid: a4f2318b6318fe547810bcb5134a081b, type: 2}
+  dialogueTriggerConditions: []
+  dialogueResultsTips: []
